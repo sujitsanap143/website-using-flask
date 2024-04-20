@@ -15,16 +15,20 @@
   </style>
   
 </head>
-<body>
-  <h1 class='text-center mt-2 mb-4''>Flask Website</h1>
+<body class='container'>
+  <h1 class='text-center mt-2 mb-4''>{{company_name}} Careers Website</h1>
   <img class='img-fluid' src='static/img2.jpg' id='banner' alt='img'>
   <h2 class='text-center mt-5'>About Website</h2>
   <p class='lead'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
   <h2 class='text-center mt-5'>Open Positions</h2>
-  <P>Todo List</P>
-  <div class='text-center'>
-    <button class='btn btn-primary btn-lg'>Contact Us</button>
+  <div>
+    {% for job in jobs %}
+      {% include 'jobitems.html' %}
+    {% endfor %}
+  </div>
+  <div class='text-center mt-5'>
+    <button class='btn btn-outline-secondary btn-lg'>Contact Us</button>
     <p class="mt-3"><span>&copy</span>Copyright 2024, Website</p>
   </div
 
