@@ -29,7 +29,7 @@ def hello():
   return render_template('home.html', jobs=JOBS, company_name='SS')
 
 
-@app.route("/jobs")
+@app.route("/jobs")  
 def list_jobs():
   return jsonify(JOBS)
 
