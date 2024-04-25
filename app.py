@@ -21,6 +21,25 @@ JOBS = [{
     'title': 'Backend Engineer',
     'location': 'San Francisco, USA',
     'salary': '$120,000'
+}, {
+    'id': 5,
+    'title': 'Python Developer',
+    'location': 'Pune, India',
+    'salary': 'Rs. 8,00,000'
+}]
+
+Cources = [{
+    'course_name': 'Data Science',
+    'course_code': 'DS',
+    'course_fees': 'Rs. 40,000'
+}, {
+    'course_name': 'Python',
+    'course_code': 'PY',
+    'course_fees': 'Rs. 22,000'
+}, {
+    'course_name': 'Machine Learning',
+    'course_code': 'ML',
+    'course_fees': 'Rs. 30,000'
 }]
 
 
@@ -29,9 +48,14 @@ def hello():
   return render_template('home.html', jobs=JOBS, company_name='SS')
 
 
-@app.route("/jobs")  
-def list_jobs():
-  return jsonify(JOBS)
+# @app.route("/jobs")
+# def list_jobs():
+#   return jsonify(JOBS)
+
+
+@app.route("/cources")
+def cource():
+  return render_template('cources.html', cources=Cources)
 
 
 if __name__ == "__main__":
